@@ -83,7 +83,7 @@ for (let i = 0; i < playlistLength; i++) {
 As is, the camelot wheel only translates keys and outputs the next key when using one of the "harmonic mixing" rules. But to get it working with real files, you either need some library which reads tags from files or some implementation within a music playert.  
 You can find such examples in these foobar2000's scripts:
 
-Search-by-Distance-SMP:  
+Search-by-Distance-SMP: creates playlists with similar tracks by multiple methods and following "harmonic mixing" rules  
 https://github.com/regorxxx/Search-by-Distance-SMP  
-Playlist-Tools-SMP:  
+Playlist-Tools-SMP:  takes an already existing playlist as pool and creates a new one following "harmonic mixing" rules  
 https://github.com/regorxxx/Playlist-Tools-SMP
