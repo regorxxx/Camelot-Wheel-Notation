@@ -55,14 +55,14 @@ While summing and substracting is a pretty easy operation, note the hour it's a 
 ```
 const movements = {
 		perfectMatch: 	35	, // perfectMatch (=)
-		energyBoost	: 	10	, // energyBoost (+1)
-		energyDrop	:	10	, // energyDrop (-1)
+		energyBoost : 	10	, // energyBoost (+1)
+		energyDrop  :	10	, // energyDrop (-1)
 		energySwitch:	10	, // energySwitch (B/A)
-		moodBoost	:	5	, // moodBoost (+3)
-		moodDrop	:	5	, // moodDrop (-3)
-		energyRaise	:	5	, // energyRaise (+7)
-		domKey		:	10	, // domKey (+1 & B/A) = energyBoost & energySwitch
-		subDomKey	:	10	, // subDomKey (-1 & B/A) = energyDrop & energySwitch
+		moodBoost   :	5	, // moodBoost (+3)
+		moodDrop    :	5	, // moodDrop (-3)
+		energyRaise :	5	, // energyRaise (+7)
+		domKey      :	10	, // domKey (+1 & B/A) = energyBoost & energySwitch
+		subDomKey   :	10	, // subDomKey (-1 & B/A) = energyDrop & energySwitch
 	}; // Sum must be 100%
 let pattern = [];
 Object.keys(movements).forEach((key) => {
