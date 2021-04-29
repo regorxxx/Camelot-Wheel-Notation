@@ -73,8 +73,8 @@ Object.keys(movements).forEach((key) => {
 pattern.sort(() => Math.random() - 0.5);
 for (let i = 0; i < playlistLength; i++) {
   keyCurrent = yourOwnTagFunc();
-	camelotKeyCurrent = camelotWheel.getKeyNotationObject(keyCurrent);
-	nextKeyObj = camelotKeyCurrent ? camelotWheel[pattern[i]](camelotKeyCurrent) : null;
+  camelotKeyCurrent = camelotWheel.getKeyNotationObject(keyCurrent);
+  nextKeyObj = camelotKeyCurrent ? camelotWheel[pattern[i]](camelotKeyCurrent) : null;
   ...
  }
 ```
