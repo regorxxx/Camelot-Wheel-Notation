@@ -53,6 +53,8 @@ let nextObjKey = camelotWheel.moodBoost(objKey); // {hour: 3, letter: 'A'}
 ```
 While summing and substracting is a pretty easy operation, note the hour it's a cyclic value from 1 to 12, therefore using the built-in methods is much easier than working with the objects. Also, it allows to easily create patterns to call the methods on sucessive movements:
 ```
+...
+const playlistLength = 50;
 const movements = {
 		perfectMatch: 	35	, // perfectMatch (=)
 		energyBoost : 	10	, // energyBoost (+1)
