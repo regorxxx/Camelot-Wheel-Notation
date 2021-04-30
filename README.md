@@ -85,4 +85,5 @@ You can find such examples in these foobar2000's scripts:
 
 1. [Search-by-Distance-SMP](https://github.com/regorxxx/Search-by-Distance-SMP): creates playlists with similar tracks by multiple methods and following "harmonic mixing" rules  
 2. [Playlist-Tools-SMP](https://github.com/regorxxx/Playlist-Tools-SMP): takes an already existing playlist as pool and creates a new one following "harmonic mixing" rules  
-https://github.com/regorxxx/Playlist-Tools-SMP
+
+![Animation](https://user-images.githubusercontent.com/83307074/116748571-2bad7d00-a9ef-11eb-8c8b-6d77c797d4c8.gif)
