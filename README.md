@@ -94,6 +94,5 @@ You can find such examples in these foobar2000's scripts:
 
 [changelog]: CHANGELOG.md
 [version_badge]: https://img.shields.io/github/release/regorxxx/Camelot-Wheel-Notation.svg
-[codacy_badge]: https://api.codacy.com/project/badge/Grade/d68ef528f77646bca546fd206d28e8a1
+[codacy_badge]: https://api.codacy.com/project/badge/Grade/1e7a52c1cd0e406f9c46357d21f7bfac
 [codefactor_badge]: https://www.codefactor.io/repository/github/regorxxx/Camelot-Wheel-Notation/badge/main
-
