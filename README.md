@@ -8,19 +8,19 @@ Javascript implementation of the Camelot Wheel, ready to use "harmonic mixing" r
 ## Usage
 ### Working with keys
 Lets say you have a currently working code to retrieve a list of keys from some files then, to transalate standard keys like ('G#m' or 'Abm') into the camelot wheel Notation, you would do:
-```
+```javascript
 let objKey = camelotWheel.getKeyNotationObject('Abm'); // {hour: 1, letter: 'A'}
 ```
 
 Can also translate back such object into standard notation. Although note there 2 ways to represent the same key, that is: sharp and flat. Both are equivalent.
-```
+```javascript
 ... // where objKey = {hour: 1	, letter: 'A'}
 let flatKey = camelotWheel.getKeyNotationFlat(objKey); // 'Abm'
-...
+...javascript
 let sharpKey = camelotWheel.getKeyNotationSharp(objKey); // 'G#m'
 ```
 To simply test if the keys exist in the wheel (i.e. are valid):
-```
+```javascript
 camelotWheel.hasKey('G#m') // True
 camelotWheel.hasKey('11A') // True
 camelotWheel.hasKey('11C') // False
@@ -46,17 +46,17 @@ Once you got your keys translated into something usable within the wheel, you ca
 Which are named: perfectMatch, energyBoost, energyDrop, energySwitch, moodBoost, moodDrop, domKey, subDomKey, energyRaise
 
 For ex. to find the next key with an energy boost:
-```
+```javascript
 let objKey = camelotWheel.getKeyNotationObject('Abm'); // {hour: 1, letter: 'A'}
 let nextObjKey = camelotWheel.energyBoost(objKey); // {hour: 2	, letter: 'A'}
 ```
 The same for a mood boost:
-```
+```javascript
 let objKey = camelotWheel.getKeyNotationObject('C#m'); // {hour: 12, letter: 'A'}
 let nextObjKey = camelotWheel.moodBoost(objKey); // {hour: 3, letter: 'A'}
 ```
 While summing and substracting is a pretty easy operation, note the hour it's a cyclic value from 1 to 12, therefore using the built-in methods is much easier than working with the objects. Also, it allows to easily create patterns to call the methods on sucessive movements:
-```
+```javascript
 ...
 const playlistLength = 50;
 const movements = {
