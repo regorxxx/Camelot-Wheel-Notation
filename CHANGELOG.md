@@ -8,7 +8,7 @@
 ## [Unreleased][]
 
 
-## [1.0.0] - 2021-05-03
+## [1.1.0] - 2021-05-03
 ### Added
 - Method for pattern creation from harmonic mixing.
 - Method for pattern application to keys.
