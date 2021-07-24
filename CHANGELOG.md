@@ -2,6 +2,7 @@
 
 ## [Table of Contents]
 - [Unreleased](#unreleased)
+- [2.0.0](#200---2021-06-07)
 - [1.1.1](#111---2021-06-07)
 - [1.1.0](#110---2021-05-03)
 - [1.0.0](#100---2021-05-02)
@@ -40,7 +41,8 @@
 ### Removed
 ### Fixed
 
-[Unreleased]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v1.1.1...v2.0.0
 [1.1.1]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/16b9932...v1.0.0

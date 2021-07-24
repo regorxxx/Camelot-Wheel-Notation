@@ -7,11 +7,11 @@ Javascript implementation of the Camelot Wheel, ready to use "harmonic mixing" r
 
 ## Usage
 ### Working with keys
-Lets say you have a currently working code to retrieve a list of keys from some files then, to transalate standard keys like ('G#m' or 'Abm') into the camelot wheel Notation, you would do:
+Lets say you have a currently working code to retrieve a list of keys from some files then, to translate standard keys like ('G#m' or 'Abm') into the camelot wheel Notation, you would do:
 ```javascript
-let objKey = camelotWheel.getKeyNotationObject('Abm'); // {hour: 1, letter: 'A'}
+let objKey = camelotWheel.getKeyNotationObjectCamelot('Abm'); // {hour: 1, letter: 'A'} in Camelot Keys notation
+let objKeyOpen = camelotWheel.getKeyNotationObjectOpen('Abm'); // {hour: 6, letter: 'm'} in Open Keys notation
 ```
-
 Can also translate back such object into standard notation. Although note there 2 ways to represent the same key, that is: sharp and flat. Both are equivalent.
 ```javascript
 ... // where objKey = {hour: 1	, letter: 'A'}
@@ -24,10 +24,15 @@ To simply test if the keys exist in the wheel (i.e. are valid):
 camelotWheel.hasKey('G#m') // True
 camelotWheel.hasKey('11A') // True
 camelotWheel.hasKey('11C') // False
-camelotWheel.hasKey(objKey.hour + objKey.letter) // True. Note objKey = {hour: 1, letter: 'A'} -> '1A'
+camelotWheel.hasKey(objKey) // True. Note objKey = {hour: 1, letter: 'A'} -> '1A'
 ```
+Finally key objects may be translated from Camelot notation to Open key notation and vice-versa.
+...javascript
+objKeyOpen = camelotWheel.translateObjectCamelotToOpen(objKey); // '{hour: 1, letter: 'A'} -> {hour: 6, letter: 'm'}'
+```
+
 ### Harmonic mixing
-Once you got your keys translated into something usable within the wheel, you can find harmonically compatible keys using the built-in methods:
+Once you got your keys translated into something usable within the wheel (objects), you can find harmonically compatible keys using the built-in methods:
  1. Perfect Match (nX -> nX): staying in the same 'hour' and letter.
  2. Energy Changes:
  	* Energy Boost (nX -> n+1X): adding one 'hour' (+1), equivalent to going up a fifth.
@@ -47,15 +52,15 @@ Which are named: perfectMatch, energyBoost, energyDrop, energySwitch, moodBoost,
 
 For ex. to find the next key with an energy boost:
 ```javascript
-let objKey = camelotWheel.getKeyNotationObject('Abm'); // {hour: 1, letter: 'A'}
+let objKey = camelotWheel.getKeyNotationObjectCamelot('Abm'); // {hour: 1, letter: 'A'}
 let nextObjKey = camelotWheel.energyBoost(objKey); // {hour: 2	, letter: 'A'}
 ```
 The same for a mood boost:
 ```javascript
-let objKey = camelotWheel.getKeyNotationObject('C#m'); // {hour: 12, letter: 'A'}
-let nextObjKey = camelotWheel.moodBoost(objKey); // {hour: 3, letter: 'A'}
+let objKey = camelotWheel.getKeyNotationObjectOpen('C#m'); // {hour: 5, letter: 'm'} note it works on both camelot or open key objects.
+let nextObjKey = camelotWheel.moodBoost(objKey); // {hour: 8, letter: 'm'}
 ```
-While summing and substracting is a pretty easy operation, note the hour it's a cyclic value from 1 to 12, therefore using the built-in methods is much easier than working with the objects. Also, it allows to easily create patterns to call the methods on sucessive movements:
+While summing and subtracting is a pretty easy operation, note the hour it's a cyclic value from 1 to 12, therefore using the built-in methods is much easier than working manually with the objects. Also, it allows to easily create patterns to call the methods on successive movements:
 ```javascript
 ...
 const playlistLength = 50;
@@ -74,7 +79,15 @@ let pattern = [];
 Object.keys(movements).forEach((key) => {
 	pattern = pattern.concat(Array(Math.ceil(playlistLength * movements[key] / 100)).fill(key));
 });
-pattern.sort(() => Math.random() - 0.5);
+// Sort randomly
+let last = pattern.length;
+let n;
+while (last > 0) {
+	n = Math.floor(Math.random() * last);
+	--last;
+	[pattern[n], pattern[last]] = [pattern[last], pattern[n]];
+}
+// And apply to your tracks
 for (let i = 0; i < playlistLength; i++) {
   keyCurrent = yourOwnTagFunc();
   camelotKeyCurrent = camelotWheel.getKeyNotationObject(keyCurrent);
@@ -84,7 +97,7 @@ for (let i = 0; i < playlistLength; i++) {
 ```
 
 ## Real World Implementation
-As is, the camelot wheel only translates keys and outputs the next key when using one of the "harmonic mixing" rules. But to get it working with real files, you either need some library which reads tags from files or some implementation within a music playert.  
+As is, the camelot wheel only translates keys and outputs the next key when using one of the "harmonic mixing" rules. But to get it working with real files, you either need some library which reads tags from files or some implementation within a music player.  
 You can find such examples in these foobar2000's scripts:
 
  1. [Search-by-Distance-SMP](https://github.com/regorxxx/Search-by-Distance-SMP): creates playlists with similar tracks by multiple methods and following "harmonic mixing" rules.  
