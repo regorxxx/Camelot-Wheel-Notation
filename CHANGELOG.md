@@ -8,7 +8,12 @@
 
 ## [Unreleased][]
 ### Added
+- Open Key support (in addition to Camelot Keys and Standard Notation). Methods to apply movements on the wheel are notation agnostic, as long as you work with the key object (Camelot Key or Open Key), so they work in both cases the same.
+- Added 2 methods to transalte object keys between Camelot notation and Open one: translateObjectCamelotToOpen & translateObjectOpenToCamelot.
 ### Changed
+- getKeyNotationObject() has been split into 2 versions, one for Camelot Keys (getKeyNotationObjectCamelot) and another for Open Keys (getKeyNotationObjectOpen), they work the same as previously and output their respective key object.
+- getKeyNotation() has been split into 2 versions, same comment applies (getKeyNotationCamelot and getKeyNotationOpen). They convert the key object to a string ('7A').
+- Pattern creation: random shuffling is now up to x1000 times faster for big sizes.
 ### Removed
 ### Fixed
 
