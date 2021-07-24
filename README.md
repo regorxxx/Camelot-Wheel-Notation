@@ -56,7 +56,8 @@ let nextObjKey = camelotWheel.energyBoost(objKey); // {hour: 2	, letter: 'A'}
 ```
 The same for a mood boost:
 ```javascript
-let objKey = camelotWheel.getKeyNotationObjectOpen('C#m'); // {hour: 5, letter: 'm'} note it works on both camelot or open key objects.
+//  Note it works the same on both camelot and open key objects
+let objKey = camelotWheel.getKeyNotationObjectOpen('C#m'); // {hour: 5, letter: 'm'}
 let nextObjKey = camelotWheel.moodBoost(objKey); // {hour: 8, letter: 'm'}
 ```
 While summing and subtracting is a pretty easy operation, note the hour it's a cyclic value from 1 to 12, therefore using the built-in methods is much easier than working manually with the objects. Also, it allows to easily create patterns to call the methods on successive movements:
@@ -64,19 +65,19 @@ While summing and subtracting is a pretty easy operation, note the hour it's a c
 ...
 const playlistLength = 50;
 const movements = {
-		perfectMatch: 	35	, // perfectMatch (=)
-		energyBoost : 	10	, // energyBoost (+1)
-		energyDrop  :	10	, // energyDrop (-1)
-		energySwitch:	10	, // energySwitch (B/A)
-		moodBoost   :	5	, // moodBoost (+3)
-		moodDrop    :	5	, // moodDrop (-3)
-		energyRaise :	5	, // energyRaise (+7)
-		domKey      :	10	, // domKey (+1 & B/A) = energyBoost & energySwitch
-		subDomKey   :	10	, // subDomKey (-1 & B/A) = energyDrop & energySwitch
-	}; // Sum must be 100%
+	perfectMatch: 	35	, // perfectMatch (=)
+	energyBoost : 	10	, // energyBoost (+1)
+	energyDrop  :	10	, // energyDrop (-1)
+	energySwitch:	10	, // energySwitch (B/A)
+	moodBoost   :	5	, // moodBoost (+3)
+	moodDrop    :	5	, // moodDrop (-3)
+	energyRaise :	5	, // energyRaise (+7)
+	domKey      :	10	, // domKey (+1 & B/A) = energyBoost & energySwitch
+	subDomKey   :	10	, // subDomKey (-1 & B/A) = energyDrop & energySwitch
+}; // Sum must be 100%
 let pattern = [];
 Object.keys(movements).forEach((key) => {
-	pattern = pattern.concat(Array(Math.ceil(playlistLength * movements[key] / 100)).fill(key));
+ pattern = pattern.concat(Array(Math.ceil(playlistLength * movements[key] / 100)).fill(key));
 });
 // Sort randomly
 let last = pattern.length;
