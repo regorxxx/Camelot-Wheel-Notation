@@ -9,8 +9,8 @@ Javascript implementation of the Camelot Wheel, ready to use "harmonic mixing" r
 ### Working with keys
 Lets say you have a currently working code to retrieve a list of keys from some files then, to translate standard keys like ('G#m' or 'Abm') into the camelot wheel Notation, you would do:
 ```javascript
-let objKey = camelotWheel.getKeyNotationObjectCamelot('Abm'); // {hour: 1, letter: 'A'} Camelot Key
-let objKeyOpen = camelotWheel.getKeyNotationObjectOpen('Abm'); // {hour: 6, letter: 'm'} Open Key
+let objKey = camelotWheel.getKeyNotationObjectCamelot('Abm'); // {hour: 1, letter: 'A'} 
+let objKeyOpen = camelotWheel.getKeyNotationObjectOpen('Abm'); // {hour: 6, letter: 'm'}
 ```
 Can also translate back such object into standard notation. Although note there 2 ways to represent the same key, that is: sharp and flat. Both are equivalent.
 ```javascript
@@ -27,7 +27,8 @@ camelotWheel.hasKey(objKey) // True. Note objKey = {hour: 1, letter: 'A'} -> '1A
 ```
 Finally key objects may be translated from Camelot notation to Open key notation and vice-versa.
 ```javascript
-objKeyOpen = camelotWheel.translateObjectCamelotToOpen(objKey); // '{hour: 1, letter: 'A'} -> {hour: 6, letter: 'm'}'
+// '{hour: 1, letter: 'A'} -> {hour: 6, letter: 'm'}'
+objKeyOpen = camelotWheel.translateObjectCamelotToOpen(objKey);
 ```
 
 ### Harmonic mixing
@@ -77,7 +78,9 @@ const movements = {
 }; // Sum must be 100%
 let pattern = [];
 Object.keys(movements).forEach((key) => {
- pattern = pattern.concat(Array(Math.ceil(playlistLength * movements[key] / 100)).fill(key));
+	pattern = pattern.concat(
+		Array(Math.ceil(playlistLength * movements[key] / 100)
+	).fill(key));
 });
 // Sort randomly
 let last = pattern.length;
