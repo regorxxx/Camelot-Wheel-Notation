@@ -12,7 +12,7 @@ Lets say you have a currently working code to retrieve a list of keys from some 
 let objKey = camelotWheel.getKeyNotationObjectCamelot('Abm'); // {hour: 1, letter: 'A'} 
 let objKeyOpen = camelotWheel.getKeyNotationObjectOpen('Abm'); // {hour: 6, letter: 'm'}
 ```
-Can also translate back such object into standard notation. Although note there 2 ways to represent the same key, that is: sharp and flat. Both are equivalent.
+Can also translate back such object into standard notation. Although note there are 2 ways to represent the same key, that is: sharp and flat. Both are equivalent.
 ```javascript
 ... // where objKey = {hour: 1	, letter: 'A'}
 let flatKey = camelotWheel.getKeyNotationFlat(objKey); // 'Abm'
