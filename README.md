@@ -98,6 +98,19 @@ for (let i = 0; i < playlistLength; i++) {
   ...
  }
 ```
+Alternatively, a pattern like that can be created with this method:
+```javascript
+const playlistLength = 50;
+const pattern = camelotWheel.createHarmonicMixingPattern(playlistLength); // An array of movement names
+```
+... and applied directly to a key object to get the list of keys which would give such pattern:
+```javascript
+...
+let objKey = camelotWheel.getKeyNotationObjectOpen('C#m'); // {hour: 5, letter: 'm'}
+// Works with both Camelot and Open Keys objects
+const pattern = camelotWheel.applyPattern(objKey, pattern); // An array of key objects
+```
+
 
 ## Real World Implementation
 As is, the camelot wheel only translates keys and outputs the next key when using one of the "harmonic mixing" rules. But to get it working with real files, you either need some library which reads tags from files or some implementation within a music player.  
