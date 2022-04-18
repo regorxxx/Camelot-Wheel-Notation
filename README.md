@@ -101,7 +101,7 @@ for (let i = 0; i < playlistLength; i++) {
 Alternatively, a pattern like that can be created with this method:
 ```javascript
 const playlistLength = 50;
-const pattern = camelotWheel.createHarmonicMixingPattern(playlistLength); // An array of movement names
+const pattern = camelotWheel.createHarmonicMixingPattern(playlistLength);
 ```
 ... and applied directly to a key object to get the list of keys which would give such pattern:
 ```javascript
