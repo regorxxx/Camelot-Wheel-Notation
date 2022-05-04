@@ -7,12 +7,12 @@ Javascript implementation of the Camelot Wheel, ready to use "harmonic mixing" r
 
 ## Usage
 ### Working with keys
-Lets say you have a currently working code to retrieve a list of keys from some files then, to translate standard keys like ('G#m' or 'Abm') into the camelot wheel Notation, you would do:
+Lets say you have a currently working code to retrieve a list of keys from some files then, to translate Standard Keys like ('G#m' or 'Abm') into the Camelot Wheel Notation, you would do:
 ```javascript
 let objKey = camelotWheel.getKeyNotationObjectCamelot('Abm'); // {hour: 1, letter: 'A'} 
 let objKeyOpen = camelotWheel.getKeyNotationObjectOpen('Abm'); // {hour: 6, letter: 'm'}
 ```
-Can also translate back such object into standard notation. Although note there are 2 ways to represent the same key, that is: sharp and flat. Both are equivalent.
+Can also translate back such object into Standard notation. Although note there are 2 ways to represent the same key, that is: Sharp and Flat. Both are equivalent.
 ```javascript
 ... // where objKey = {hour: 1	, letter: 'A'}
 let flatKey = camelotWheel.getKeyNotationFlat(objKey); // 'Abm'
@@ -25,7 +25,7 @@ camelotWheel.hasKey('11A') // True
 camelotWheel.hasKey('11C') // False
 camelotWheel.hasKey(objKey) // True. Note objKey = {hour: 1, letter: 'A'} -> '1A'
 ```
-Finally key objects may be translated from Camelot notation to Open key notation and vice-versa.
+Finally key objects may be translated from Camelot notation to Open Key notation and vice-versa.
 ```javascript
 // '{hour: 1, letter: 'A'} -> {hour: 6, letter: 'm'}'
 objKeyOpen = camelotWheel.translateObjectCamelotToOpen(objKey);
@@ -113,7 +113,7 @@ const pattern = camelotWheel.applyPattern(objKey, pattern); // An array of key o
 
 
 ## Real World Implementation
-As is, the camelot wheel only translates keys and outputs the next key when using one of the "harmonic mixing" rules. But to get it working with real files, you either need some library which reads tags from files or some implementation within a music player.  
+As is, the Camelot Wheel only translates keys and outputs the next key when using one of the "harmonic mixing" rules. But to get it working with real files, you either need some library which reads tags from files or some implementation within a music player.  
 You can find such examples in these foobar2000's scripts:
 
  1. [Search-by-Distance-SMP](https://github.com/regorxxx/Search-by-Distance-SMP): creates playlists with similar tracks by multiple methods and following "harmonic mixing" rules.  
