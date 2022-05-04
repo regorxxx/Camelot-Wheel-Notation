@@ -3,7 +3,7 @@
 [![CodeFactor][codefactor_badge]](https://www.codefactor.io/repository/github/regorxxx/Camelot-Wheel-Notation/overview/main)
 [![Codacy Badge][codacy_badge]](https://www.codacy.com/gh/regorxxx/Camelot-Wheel-Notation/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=regorxxx/Camelot-Wheel-Notation&amp;utm_campaign=Badge_Grade)
 ![GitHub](https://img.shields.io/github/license/regorxxx/Camelot-Wheel-Notation)  
-Javascript implementation of the Camelot Wheel, ready to use "harmonic mixing" rules and translations for standard key notations. The Camelot Wheel is a representation where musical keys are displayed as ‘hours’ on a clock followed by a letter (A, B). Its main use is mixing songs following a set of rules named "harmonic mixing" or "mixing in key".
+Javascript implementation of the Camelot Wheel, ready to use "harmonic mixing" rules and translations for Standard Key and Open Key notations. The Camelot Wheel is a representation where musical keys are displayed as ‘hours’ on a clock followed by a letter (A, B). Its main use is mixing songs following a set of rules named "harmonic mixing" or "mixing in key".
 
 ## Usage
 ### Working with keys
