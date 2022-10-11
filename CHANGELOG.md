@@ -16,7 +16,7 @@
 ## [2.0.0] - 2022-10-11
 ### Added
 - Open Key support (in addition to Camelot Keys and Standard Notation). Methods to apply movements on the wheel are notation agnostic, as long as you work with the key object (Camelot Key or Open Key), so they work in both cases the same.
-- Added 2 methods to translate object keys between Camelot notation and Open one: translateObjectCamelotToOpen & translateObjectOpenToCamelot.
+- Added 2 methods to translate object keys between Camelot notation and Open one: translateObjectCamelotToOpen() and translateObjectOpenToCamelot().
 - getKeyNotationTable() and getKeyNotationObjectTable() to retrieve a copy (not a reference) of the private translation tables.
 - translateToNotation() method to convert any key object to multiple notations at the same time, for ex. for queries.
 - clone() method to clone a key object. i.e. simple object destructuring.
