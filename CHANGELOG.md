@@ -13,6 +13,14 @@
 ### Removed
 ### Fixed
 
+## [2.0.1] - 2022-10-19
+### Added
+### Changed
+### Removed
+### Fixed
+- createRange() method was not working properly due to missing this context.
+- applyPattern() method was not working properly due to missing this context.
+
 ## [2.0.0] - 2022-10-11
 ### Added
 - Open Key support (in addition to Camelot Keys and Standard Notation). Methods to apply movements on the wheel are notation agnostic, as long as you work with the key object (Camelot Key or Open Key), so they work in both cases the same.
@@ -54,7 +62,8 @@
 ### Removed
 ### Fixed
 
-[Unreleased]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v1.1.1...v2.0.0
 [1.1.1]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/regorxxx/Camelot-Wheel-Notation/compare/v1.0.0...v1.1.0
