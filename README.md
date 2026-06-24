@@ -116,8 +116,8 @@ const pattern = camelotWheel.applyPattern(objKey, pattern); // An array of key o
 As is, the Camelot Wheel only translates keys and outputs the next key when using one of the "harmonic mixing" rules. But to get it working with real files, you either need some library which reads tags from files or some implementation within a music player.  
 You can find such examples in these foobar2000's scripts:
 
- 1. [Search-by-Distance-SMP](https://github.com/regorxxx/Search-by-Distance-SMP): creates playlists with similar tracks by multiple methods and following "harmonic mixing" rules.  
- 2. [Playlist-Tools-SMP](https://github.com/regorxxx/Playlist-Tools-SMP): takes an already existing playlist as pool and creates a new one following "harmonic mixing" rules.  
+ 1. [Search-by-Distance-SMP](https://github.com/regorxxx/Search-by-Distance-SMP): creates playlists with similar tracks (graph-based algorithm) and following "harmonic mixing" rules.  
+ 2. [Infinity-Tools-SMP](https://github.com/regorxxx/Infinity-Tools-SMP): sorting, selection and playlisyt creation using "harmonic mixing" rules.  
 
 ![harmonicmix](https://user-images.githubusercontent.com/83307074/163871234-0388e995-95ea-4fb5-b286-2462f5dcc462.gif)
 
